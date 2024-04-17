@@ -71,7 +71,7 @@ const phoneInput = document.createElement("input");
 phoneInput.setAttribute("id", "siydum-pn");
 phoneInput.type = "tel";
 phoneInput.name = "firstname";
-phoneInput.placeholder = "Phone number pls with country code";
+phoneInput.placeholder = "Phone number with country code";
 const submitButton = document.createElement("input");
 submitButton.setAttribute("id", "siydum-subbtn");
 submitButton.type = "submit";
