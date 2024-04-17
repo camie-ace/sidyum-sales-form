@@ -1,3 +1,8 @@
+const link = document.createElement("link");
+link.setAttribute("rel", "stylesheet");
+link.setAttribute("href", "https://camie-ace.github.io/sidyum-sales-form/styles.css");
+document.head.appendChild(link);
+
 // Create the outer container
 const outerContainer = document.createElement("div");
 outerContainer.classList.add("siydum-open-modal");
@@ -93,10 +98,7 @@ outerContainer.appendChild(modalContainer);
 
 // Append the outer container to the document
 document.querySelector(".siydum-whole-container").appendChild(outerContainer);
-const link = document.createElement("link");
-link.setAttribute("rel", "stylesheet");
-link.setAttribute("href", "https://camie-ace.github.io/sidyum-sales-form/styles.css");
-document.head.appendChild(link);
+
 
 document
   .querySelector("#sidyum-btn-open-modal")
