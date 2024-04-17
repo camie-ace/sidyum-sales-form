@@ -4,12 +4,14 @@
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 100vh; /* Full height */
+  /* height: auto; */
+  min-height: 100vh; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
+
 }
 
 .hide {
@@ -71,13 +73,16 @@
 
 .siydum-open-modal {
   display: flex;
-  width: 300px;
+  width: 250px;
   height: fit-content;
   background-color: #333;
   align-items: flex-start;
   border-radius: 10px;
   padding: 10px 10px 20px;
   flex-direction: column;
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
 }
 .open-model {
   display: flex;
