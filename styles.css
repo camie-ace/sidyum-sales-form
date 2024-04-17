@@ -1,0 +1,119 @@
+.siydum-emb-modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.hide {
+  display: none;
+}
+
+.siydium-disabled-btn {
+  background-color: gray !important;
+  color: black;
+  border: none !important;
+}
+
+.siydium-disabled-btn:hover {
+  cursor: not-allowed;
+}
+
+.siydum-form-container {
+  width: auto;
+  min-width: 450px;
+  max-width: 600px;
+  background-color: white;
+  height: fit-content;
+  padding: 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.siydum-input-con {
+  width: 90%;
+  display: flex;
+}
+
+.siydum-form-container .siydum-input-con input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 1px solid;
+  border-color: blue;
+}
+
+.siydum-form-container .siydum-input-con input:focus {
+  outline: none;
+}
+.siydum-emb-modal img {
+  margin-bottom: 50px;
+}
+
+.siydum-form-container .siydum-input-con input[type="submit"] {
+  background-color: blue;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.siydum-open-modal {
+  display: flex;
+  width: 300px;
+  height: fit-content;
+  background-color: #333;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 10px 10px 20px;
+  flex-direction: column;
+}
+.open-model {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  align-items: center;
+}
+.siydum-open-modal img {
+  width: 100px;
+}
+.siydum-open-modal > button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: blue;
+  border: none;
+  color: #fff;
+}
+
+.siydum-whole-container {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 20px 10px;
+}
+
+.sidyum-close {
+  position: absolute;
+  left: 90%;
+  font-size: 30px;
+  padding: 0 10px;
+}
+.sidyum-close:hover {
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+}
