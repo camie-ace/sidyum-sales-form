@@ -1,3 +1,9 @@
+const link = document.createElement("link");
+link.setAttribute("rel", "stylesheet");
+link.setAttribute("href", "https://camie-ace.github.io/sidyum-sales-form/btn.css");
+document.head.appendChild(link);
+
+
 const sidy_container_holder = document.querySelector(".sidy-btn-container");
 
 const button = document.createElement("button");
