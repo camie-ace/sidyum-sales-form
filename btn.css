@@ -1,0 +1,93 @@
+ .Sidy-modal {
+     /* display: none; */
+     position: fixed;
+     z-index: 1;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.4);
+ }
+
+ .Sidy-modal-content {
+     background-color: #fefefe;
+     margin: 15% auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 30%;
+ }
+
+ .Sidy-close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+ .Sidy-close:hover,
+ .Sidy-close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ @keyframes sidyum-ebeddable-btn-animation {
+     0% {
+         transform: scale(1);
+         background-position: 0% 50%;
+     }
+
+     50% {
+         transform: scale(1.2);
+         background-position: 100% 50%;
+     }
+
+     60% {
+         transform: scale(1);
+     }
+
+     70% {
+         transform: scale(1.2);
+     }
+
+     80% {
+         transform: scale(1);
+     }
+
+     90% {
+         transform: scale(1.2);
+     }
+
+     100% {
+         transform: scale(1);
+         background-position: 0% 50%;
+     }
+ }
+
+ .sidyum-ebeddable-btn-bg {
+     background: linear-gradient(45deg,
+             #ff6b6b,
+             #ffa500,
+             #ffff66,
+             #66ff66,
+             #66ffff,
+             #6666ff,
+             #ff66ff,
+             #ff6b6b);
+     animation: sidyum-ebeddable-btn-animation 2s ease-in-out infinite;
+ }
+
+ .sidyum-ebeddable-btn {
+     padding: 15px 50px;
+     font-size: 30px;
+     background-color: gray;
+     border: 0px;
+     color: #000;
+     border-radius: 50px;
+     background-size: 400% 400%;
+ }
+
+ .sidyum-ebeddable-btn-cusor {
+     cursor: not-allowed;
+ }
