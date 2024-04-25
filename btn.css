@@ -1,93 +1,169 @@
- .Sidy-modal {
-     /* display: none; */
-     position: fixed;
-     z-index: 1;
-     left: 0;
-     top: 0;
-     width: 100%;
-     height: 100%;
-     overflow: auto;
-     background-color: rgba(0, 0, 0, 0.4);
- }
+.Sidy-modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 15;
+}
 
- .Sidy-modal-content {
-     background-color: #fefefe;
-     margin: 15% auto;
-     padding: 20px;
-     border: 1px solid #888;
-     width: 30%;
- }
+.Sidy-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 20px;
+  position: relative;
+  border-color: orangered;
+}
 
- .Sidy-close {
-     color: #aaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
- }
+.Sidy-close {
+  color: #aaa;
+  float: right;
+  font-size: 23px;
+  position: absolute;
+  font-weight: bold;
+  top: 5px;
+  right: 10px;
+}
 
- .Sidy-close:hover,
- .Sidy-close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
- }
+.Sidy-close:hover,
+.Sidy-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
- @keyframes sidyum-ebeddable-btn-animation {
-     0% {
-         transform: scale(1);
-         background-position: 0% 50%;
-     }
+@keyframes sidyum-ebeddable-btn-animation {
+  0% {
+    transform: scale(1);
+    background-position: 0% 50%;
+  }
 
-     50% {
-         transform: scale(1.2);
-         background-position: 100% 50%;
-     }
+  50% {
+    transform: scale(1.2);
+    background-position: 100% 50%;
+  }
 
-     60% {
-         transform: scale(1);
-     }
+  60% {
+    transform: scale(1);
+  }
 
-     70% {
-         transform: scale(1.2);
-     }
+  70% {
+    transform: scale(1.2);
+  }
 
-     80% {
-         transform: scale(1);
-     }
+  80% {
+    transform: scale(1);
+  }
 
-     90% {
-         transform: scale(1.2);
-     }
+  90% {
+    transform: scale(1.2);
+  }
 
-     100% {
-         transform: scale(1);
-         background-position: 0% 50%;
-     }
- }
+  100% {
+    transform: scale(1);
+    background-position: 0% 50%;
+  }
+}
 
- .sidyum-ebeddable-btn-bg {
-     background: linear-gradient(45deg,
-             #ff6b6b,
-             #ffa500,
-             #ffff66,
-             #66ff66,
-             #66ffff,
-             #6666ff,
-             #ff66ff,
-             #ff6b6b);
-     animation: sidyum-ebeddable-btn-animation 2s ease-in-out infinite;
- }
+.sidyum-ebeddable-btn-bg {
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #ffa500,
+    #ffff66,
+    #66ff66,
+    #66ffff,
+    #6666ff,
+    #ff66ff,
+    #ff6b6b
+  );
+  animation: sidyum-ebeddable-btn-animation 2s ease-in-out infinite;
+}
 
- .sidyum-ebeddable-btn {
-     padding: 15px 50px;
-     font-size: 30px;
-     background-color: gray;
-     border: 0px;
-     color: #000;
-     border-radius: 50px;
-     background-size: 400% 400%;
- }
+.sidyum-ebeddable-btn {
+  padding: 15px 50px;
+  font-size: 30px;
+  background-color: gray;
+  border: 0px;
+  color: #000;
+  border-radius: 50px;
+  background-size: 400% 400%;
+}
 
- .sidyum-ebeddable-btn-cusor {
-     cursor: not-allowed;
- }
+.sidyum-ebeddable-btn-cusor {
+  cursor: not-allowed;
+}
+
+.call-status-ringing {
+  content: "I'm calling your phone now";
+}
+
+.sidy-con-firm-modal {
+  /* display: none; */
+  display: block;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sidy-con-firm-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  gap: 0;
+}
+
+.sidy-con-firm-modal-content p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidy-con-firm-modal-content p input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  border-radius: 1px solid #ccc;
+}
+
+.sidy-con-firm-modal-close {
+  color: #aaa;
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#sidy-con-firm-modal-confirmDetailsButton {
+  align-self: center;
+  background-color: blue;
+  padding: 5px 30px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.sidy-con-firm-modal-close:hover,
+.sidy-con-firm-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
