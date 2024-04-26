@@ -88,7 +88,7 @@ const makeSidyumDemoCall = async () => {
             "No one answered the call";
         }
       }
-    }, 20000);
+    }, 10000);
   } else {
     updateSidyBTN();
     const res = await result.json();
