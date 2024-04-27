@@ -38,9 +38,13 @@ const makeSidyumDemoCall = async () => {
   const queryValueNumber = document.getElementById(
     "sidy-con-firm-modal-phoneNumberDisplay"
   ).value;
+  const queryValueEmail = document.getElementById(
+    "sidy-con-firm-modal-emailDisplay"
+  ).value;
   console.log(queryValueName);
   console.log(queryValueBusinessName);
   console.log(queryValueNumber);
+  console.log(queryValueEmail);
   document.getElementById("sidyum-ebeddable-btn").innerText =
     "I'm calling your phone now";
   const result = await fetch("https://ma0358.buildship.run/demo-ai", {
@@ -52,6 +56,7 @@ const makeSidyumDemoCall = async () => {
       name: queryValueName,
       businessName: queryValueBusinessName,
       number: `${queryValueNumber}`,
+      email: queryValueEmail
     }),
   });
   var intervalId = null;
@@ -78,17 +83,19 @@ const makeSidyumDemoCall = async () => {
       if (answer.call_status === "ended") {
         clearInterval(intervalId);
         intervalId = null;
-        if (answer.call_answered === "1") {
+        document.getElementById("sidyum-ebeddable-btn").innerText =
+          "Call on cool down";
+        document
+          .getElementById("sidyum-ebeddable-btn")
+          .classList.add("cool-down");
+        setTimeout(() => {
           updateSidyBTN();
-          document.getElementById("sidyum-ebeddable-btn").innerText =
-            "It was nice speaking with you";
-        } else {
-          updateSidyBTN();
-          document.getElementById("sidyum-ebeddable-btn").innerText =
-            "No one answered the call";
-        }
+          document
+            .getElementById("sidyum-ebeddable-btn")
+            .classList.remove("cool-down");
+        }, 60000);
       }
-    }, 10000);
+    }, 20000);
   } else {
     updateSidyBTN();
     const res = await result.json();
@@ -109,6 +116,7 @@ const makeSidyumDemoCall = async () => {
 
 function updateSidyBTN() {
   SIDYBTN.disabled = false;
+  document.getElementById("sidyum-ebeddable-btn").innerText = "Start Demo";
   document
     .getElementById("sidyum-ebeddable-btn")
     .classList.add("sidyum-ebeddable-btn-bg");
@@ -161,6 +169,7 @@ function createConfirmationModal() {
   const name = queryParams.get("Name");
   const businessName = queryParams.get("businessName");
   const phoneNumber = queryParams.get("phoneNumber");
+  const emailAdd = queryParams.get("email");
 
   // Create the modal elements
   const modal = document.createElement("div");
@@ -195,6 +204,12 @@ function createConfirmationModal() {
   phoneNumberDisplay.innerHTML = "<span>Phone Number: </span>";
   phoneNumberDisplay.appendChild(phoneNumberSpan);
 
+  const emailDisplay = document.createElement("p");
+  const emailSpan = document.createElement("input");
+  emailSpan.id = "sidy-con-firm-modal-emailDisplay";
+  emailDisplay.innerHTML = "<span>Email: </span>";
+  emailDisplay.appendChild(emailSpan);
+
   const confirmButton = document.createElement("button");
   confirmButton.id = "sidy-con-firm-modal-confirmDetailsButton";
   confirmButton.textContent = "Confirm";
@@ -205,6 +220,7 @@ function createConfirmationModal() {
   modalContent.appendChild(nameDisplay);
   modalContent.appendChild(businessNameDisplay);
   modalContent.appendChild(phoneNumberDisplay);
+  modalContent.appendChild(emailDisplay);
   modalContent.appendChild(confirmButton);
   modal.appendChild(modalContent);
   document.body.append(modal);
@@ -212,6 +228,7 @@ function createConfirmationModal() {
   document.getElementById("sidy-con-firm-modal-nameDisplay").value = name;
   document.getElementById("sidy-con-firm-modal-businessNameDisplay").value =
     businessName;
+  document.getElementById("sidy-con-firm-modal-emailDisplay").value = emailAdd;
   document.getElementById("sidy-con-firm-modal-phoneNumberDisplay").value =
     "+" + phoneNumber;
 
