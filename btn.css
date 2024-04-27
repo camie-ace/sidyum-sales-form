@@ -87,9 +87,14 @@
   animation: sidyum-ebeddable-btn-animation 2s ease-in-out infinite;
 }
 
+.cool-down {
+  animation: sidyum-ebeddable-btn-animation 6s ease-in-out infinite;
+  background-color: lightcoral !important;
+}
+
 .sidyum-ebeddable-btn {
-  padding: 15px 50px;
-  font-size: 30px;
+  padding: 10px 50px;
+  font-size: 25px;
   background-color: gray;
   border: 0px;
   color: #000;
@@ -158,7 +163,7 @@
   color: white;
   border: none;
   border-radius: 10px;
-  margin: 15px auto;
+  margin: auto;
 }
 
 .sidy-con-firm-modal-close:hover,
