@@ -41,6 +41,19 @@
 
 @keyframes sidyum-ebeddable-btn-animation {
   0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes cooldown-ebeddable-btn-animation {
+  0% {
     transform: scale(1);
     background-position: 0% 50%;
   }
@@ -88,7 +101,7 @@
 }
 
 .cool-down {
-  animation: sidyum-ebeddable-btn-animation 6s ease-in-out infinite;
+  animation: cooldown-ebeddable-btn-animation 6s ease-in-out infinite;
   background-color: lightcoral !important;
 }
 
