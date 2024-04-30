@@ -13,7 +13,7 @@
 
 .Sidy-modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 25% auto 15%;
   padding: 20px;
   border: 1px solid #888;
   width: 30%;
@@ -138,7 +138,7 @@
 
 .sidy-con-firm-modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 15% auto 15%;
   padding: 20px;
   border: 1px solid #888;
   width: 40%;
