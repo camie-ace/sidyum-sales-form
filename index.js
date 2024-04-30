@@ -2,7 +2,6 @@ const link = document.createElement("link");
 link.setAttribute("rel", "stylesheet");
 link.setAttribute("href", "https://camie-ace.github.io/sidyum-sales-form/btn.css");
 document.head.appendChild(link);
-
 const sidy_container_holder = document.querySelector(".sidy-btn-container");
 
 const button = document.createElement("button");
@@ -56,7 +55,7 @@ const makeSidyumDemoCall = async () => {
       name: queryValueName,
       businessName: queryValueBusinessName,
       number: `${queryValueNumber}`,
-      email: queryValueEmail
+      email: queryValueEmail,
     }),
   });
   var intervalId = null;
@@ -252,8 +251,16 @@ function createConfirmationModal() {
             .value
         )
       ) {
-        makeSidyumDemoCall();
-        document.querySelector(".sidy-con-firm-modal-close").click();
+        if (
+          validateEmail(
+            document.getElementById("sidy-con-firm-modal-emailDisplay").value
+          )
+        ) {
+          makeSidyumDemoCall();
+          document.querySelector(".sidy-con-firm-modal-close").click();
+        } else {
+          create_sidy_modal("Please enter a valid email address.");
+        }
       } else {
         create_sidy_modal("Please enter a valid phone number.");
       }
@@ -263,4 +270,11 @@ function isValidPhoneNumber(phoneNumber) {
   phoneNumber = phoneNumber.replace(/\s/g, "");
   const phoneNumberPattern = /^\+1\d{10}$/;
   return phoneNumberPattern.test(phoneNumber);
+}
+
+function validateEmail(email_value) {
+  const emailRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  const email = email_value.trim();
+  return emailRegex.test(email);
 }
