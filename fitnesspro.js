@@ -72,7 +72,7 @@ function createFormInterface() {
         id="salesForm"
       >
         <h2 class="text-cyan-500 text-center font-sans text-lg mb-4">
-          Camie Tech
+          ${document.getElementById("info-from-bubble").dataset.businessname}
         </h2>
         <input
           type="text"
