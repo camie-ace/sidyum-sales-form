@@ -1,7 +1,11 @@
 const body = document.getElementsByTagName("body")[0];
 
 document.addEventListener("DOMContentLoaded", function () {
-  const style = document.createElement("style");
+
+});
+
+function createAPP() {
+    const style = document.createElement("style");
   const script = document.createElement("script");
   script.setAttribute("src", "https://cdn.tailwindcss.com");
   style.textContent = `
@@ -25,8 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.head.appendChild(style);
   document.head.appendChild(script);
-});
+}
 
+createAPP()
 let buttonTriggerStatus = false;
 let threadId = "";
 
